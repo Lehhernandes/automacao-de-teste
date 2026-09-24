@@ -14,10 +14,14 @@ def driver():
 
 def driver_func():
     chrome_options = Options()
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-dev-shm-usage")
+    chrome_options.add_argument("--window-size=1920,1080")
     user_data_dir = tempfile.mkdtemp()
     chrome_options.add_argument(f"--user-datadir={user_data_dir}")
 
-    # ✅ Desativa Password Manager convencional
+
     prefs = {
         "credentials_enable_service": False,
         "profile.password_manager_enabled": False,
@@ -25,12 +29,8 @@ def driver_func():
     }
 
     chrome_options.add_experimental_option("prefs", prefs)
-
-    # ✅ Desativa Safe Browsing (remove alertas de segurança)
     chrome_options.add_argument("--disablefeatures=PasswordLeakDetection")
     chrome_options.add_argument("--safebrowsing-disable-leakdetection")
-
-    # ✅ Hardening adicional
     chrome_options.add_argument("--disable-notifications")
     chrome_options.add_argument("--disable-infobars")
     chrome_options.add_argument("--disable-extensions")
