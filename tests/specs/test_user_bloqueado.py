@@ -40,10 +40,6 @@ def test_usuario_bloqueado(driver):
     assert "saucedemo.com" in driver.current_url, "A aplicação não permaneceu na página de login."
 
 
-
-
-
-
 def test_user_bloqueado_2(driver):
 
     app = Application(driver)

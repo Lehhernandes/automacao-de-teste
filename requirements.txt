@@ -1,3 +1,7 @@
+isort
+flake8
+tox
+black
 selenium
 pytest
 webdriver-manager
