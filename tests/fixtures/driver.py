@@ -1,0 +1,39 @@
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
+import tempfile
+import pytest
+
+
+@pytest.fixture
+def driver():
+    driver = driver_func()
+    yield driver
+
+    driver.quit()
+
+def driver_func():
+    chrome_options = Options()
+    user_data_dir = tempfile.mkdtemp()
+    chrome_options.add_argument(f"--user-datadir={user_data_dir}")
+
+    # ✅ Desativa Password Manager convencional
+    prefs = {
+        "credentials_enable_service": False,
+        "profile.password_manager_enabled": False,
+        "profile.password_manager_leak_detection": False,
+    }
+
+    chrome_options.add_experimental_option("prefs", prefs)
+
+    # ✅ Desativa Safe Browsing (remove alertas de segurança)
+    chrome_options.add_argument("--disablefeatures=PasswordLeakDetection")
+    chrome_options.add_argument("--safebrowsing-disable-leakdetection")
+
+    # ✅ Hardening adicional
+    chrome_options.add_argument("--disable-notifications")
+    chrome_options.add_argument("--disable-infobars")
+    chrome_options.add_argument("--disable-extensions")
+    driver = webdriver.Chrome(options=chrome_options)
+    driver.maximize_window()
+    return driver
