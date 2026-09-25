@@ -19,7 +19,7 @@ def driver_func():
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--window-size=1920,1080")
     user_data_dir = tempfile.mkdtemp()
-    chrome_options.add_argument(f"--user-datadir={user_data_dir}")
+    chrome_options.add_argument(f"--user-data-dir={user_data_dir}")
 
 
     prefs = {
@@ -29,7 +29,7 @@ def driver_func():
     }
 
     chrome_options.add_experimental_option("prefs", prefs)
-    chrome_options.add_argument("--disablefeatures=PasswordLeakDetection")
+    chrome_options.add_argument("--disable-features=PasswordLeakDetection")
     chrome_options.add_argument("--safebrowsing-disable-leakdetection")
     chrome_options.add_argument("--disable-notifications")
     chrome_options.add_argument("--disable-infobars")
