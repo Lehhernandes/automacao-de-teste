@@ -1,0 +1,12 @@
+[32mINFO    [0m guara.transaction:transaction.py:651 Transaction 'LoginWith' succeded.
+[32mINFO    [0m guara.transaction:transaction.py:654 {'transaction': 'LoginWith', 'parameters': [{'url': 'https://www.saucedemo.com', 'user': 'locked_out_user', 'password': '********'}]}
+[31m[1mERROR   [0m guara.assertion:assertion.py:72 {'assertion': 'Contains', 'actual': 'https://www.saucedemo.com/', 'expected': 'Epic sadface: Sorry, this user has been locked out.'}
+[31m[1mERROR   [0m guara.assertion:assertion.py:73 Expected 'Epic sadface: Sorry, this user has been locked out.' to be in 'https://www.saucedemo.com/'
+Traceback (most recent call last):
+  File "/home/tgt/automation_test_pos/automacao-testes/venv/lib/python3.14/site-packages/guara/assertion.py", line 67, in validates
+    self.asserts(actual, expected)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/tgt/automation_test_pos/automacao-testes/venv/lib/python3.14/site-packages/guara/it.py", line 141, in asserts
+    assert expected in actual, f"Expected '{expected}' to be in '{actual}'"
+           ^^^^^^^^^^^^^^^^^^
+AssertionError: Expected 'Epic sadface: Sorry, this user has been locked out.' to be in 'https://www.saucedemo.com/'

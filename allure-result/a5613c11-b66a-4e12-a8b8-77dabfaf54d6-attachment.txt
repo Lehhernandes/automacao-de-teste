@@ -1,0 +1,12 @@
+2026-09-25 10:06:31.173 INFO Transaction 'LoginWith' succeded.
+2026-09-25 10:06:31.173 INFO {'transaction': 'LoginWith', 'parameters': [{'url': 'https://www.saucedemo.com', 'user': 'locked_out_user', 'password': '********'}]}
+2026-09-25 10:06:31.173 ERROR {'assertion': 'Contains', 'actual': 'https://www.saucedemo.com/', 'expected': 'Epic sadface: Sorry, this user has been locked out.'}
+2026-09-25 10:06:31.173 ERROR Expected 'Epic sadface: Sorry, this user has been locked out.' to be in 'https://www.saucedemo.com/'
+Traceback (most recent call last):
+  File "/home/tgt/automation_test_pos/automacao-testes/venv/lib/python3.14/site-packages/guara/assertion.py", line 67, in validates
+    self.asserts(actual, expected)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/home/tgt/automation_test_pos/automacao-testes/venv/lib/python3.14/site-packages/guara/it.py", line 141, in asserts
+    assert expected in actual, f"Expected '{expected}' to be in '{actual}'"
+           ^^^^^^^^^^^^^^^^^^
+AssertionError: Expected 'Epic sadface: Sorry, this user has been locked out.' to be in 'https://www.saucedemo.com/'

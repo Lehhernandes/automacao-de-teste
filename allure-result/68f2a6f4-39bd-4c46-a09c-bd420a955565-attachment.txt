@@ -1,0 +1,12 @@
+[32mINFO    [0m guara.transaction:transaction.py:651 Transaction 'LoginWith' succeded.
+[32mINFO    [0m guara.transaction:transaction.py:654 {'transaction': 'LoginWith', 'parameters': [{'url': 'https://www.saucedemo.com', 'user': 'standard_user', 'password': '********'}]}
+[32mINFO    [0m guara.assertion:assertion.py:69 {'assertion': 'Contains', 'actual': 'https://www.saucedemo.com/inventory.html', 'expected': 'inventory'}
+[32mINFO    [0m guara.transaction:transaction.py:651 Transaction 'AddProductToCart' succeded.
+[32mINFO    [0m guara.transaction:transaction.py:654 {'transaction': 'AddProductToCart', 'parameters': [{}]}
+[32mINFO    [0m guara.assertion:assertion.py:69 {'assertion': 'Contains', 'actual': 'https://www.saucedemo.com/cart.html', 'expected': 'cart'}
+[32mINFO    [0m guara.transaction:transaction.py:651 Transaction 'TheUSerDoesACheckoutWith' succeded.
+[32mINFO    [0m guara.transaction:transaction.py:654 {'transaction': 'TheUSerDoesACheckoutWith', 'parameters': [{'name': 'Douglas', 'last': 'Teste', 'zip_code': '12345'}]}
+[32mINFO    [0m guara.assertion:assertion.py:69 {'assertion': 'Contains', 'actual': 'https://www.saucedemo.com/checkout-step-two.html', 'expected': 'checkout-step-two'}
+[32mINFO    [0m guara.transaction:transaction.py:651 Transaction 'FinishOrder' succeded.
+[32mINFO    [0m guara.transaction:transaction.py:654 {'transaction': 'FinishOrder', 'parameters': [{}]}
+[32mINFO    [0m guara.assertion:assertion.py:69 {'assertion': 'Contains', 'actual': 'Thank you for your order!', 'expected': 'Thank you'}

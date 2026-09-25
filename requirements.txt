@@ -9,3 +9,4 @@ python-dotenv
 guara
 behave
 pytest-bdd
+allure-pytest

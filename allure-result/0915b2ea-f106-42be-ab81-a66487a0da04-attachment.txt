@@ -1,0 +1,3 @@
+[32mINFO    [0m guara.transaction:transaction.py:651 Transaction 'LoginWith' succeded.
+[32mINFO    [0m guara.transaction:transaction.py:654 {'transaction': 'LoginWith', 'parameters': [{'url': 'https://www.saucedemo.com', 'user': 'standard_user', 'password': '********'}]}
+[32mINFO    [0m guara.assertion:assertion.py:69 {'assertion': 'Contains', 'actual': 'https://www.saucedemo.com/inventory.html', 'expected': 'inventory'}

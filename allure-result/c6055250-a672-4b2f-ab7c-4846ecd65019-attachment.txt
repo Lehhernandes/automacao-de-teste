@@ -1,0 +1,12 @@
+2026-09-25 10:06:25.345 INFO Transaction 'LoginWith' succeded.
+2026-09-25 10:06:25.345 INFO {'transaction': 'LoginWith', 'parameters': [{'url': 'https://www.saucedemo.com', 'user': 'standard_user', 'password': '********'}]}
+2026-09-25 10:06:25.346 INFO {'assertion': 'Contains', 'actual': 'https://www.saucedemo.com/inventory.html', 'expected': 'inventory'}
+2026-09-25 10:06:25.463 INFO Transaction 'AddProductToCart' succeded.
+2026-09-25 10:06:25.463 INFO {'transaction': 'AddProductToCart', 'parameters': [{}]}
+2026-09-25 10:06:25.463 INFO {'assertion': 'Contains', 'actual': 'https://www.saucedemo.com/cart.html', 'expected': 'cart'}
+2026-09-25 10:06:25.962 INFO Transaction 'TheUSerDoesACheckoutWith' succeded.
+2026-09-25 10:06:25.962 INFO {'transaction': 'TheUSerDoesACheckoutWith', 'parameters': [{'name': 'Douglas', 'last': 'Teste', 'zip_code': '12345'}]}
+2026-09-25 10:06:25.963 INFO {'assertion': 'Contains', 'actual': 'https://www.saucedemo.com/checkout-step-two.html', 'expected': 'checkout-step-two'}
+2026-09-25 10:06:26.084 INFO Transaction 'FinishOrder' succeded.
+2026-09-25 10:06:26.084 INFO {'transaction': 'FinishOrder', 'parameters': [{}]}
+2026-09-25 10:06:26.084 INFO {'assertion': 'Contains', 'actual': 'Thank you for your order!', 'expected': 'Thank you'}
