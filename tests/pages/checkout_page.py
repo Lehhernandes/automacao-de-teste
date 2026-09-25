@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from .base_page import BasePage
-
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 class CheckoutPage(BasePage):
 
@@ -12,6 +13,9 @@ class CheckoutPage(BasePage):
     SUCCESS_MSG = (By.CLASS_NAME, "complete-header")
 
     def fill_form(self, name, last, zip_code):
+        WebDriverWait(self.driver, 15).until(
+            EC.visibility_of_element_located(self.FIRST_NAME)
+        )
         self.type(*self.FIRST_NAME, name)
         self.type(*self.LAST_NAME, last)
         self.type(*self.POSTAL_CODE, zip_code)
