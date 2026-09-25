@@ -10,3 +10,6 @@ guara
 behave
 pytest-bdd
 allure-pytest
+sphinx
+myst-parser
+make

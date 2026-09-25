@@ -7,7 +7,6 @@ from selenium.webdriver.support.ui import Select
 import pytest
 
 @pytest.mark.smoke
-
 def test_ordenar_produtos_por_preco_crescente(driver):
     driver.get("https://www.saucedemo.com")
 
