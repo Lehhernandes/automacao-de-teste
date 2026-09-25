@@ -4,7 +4,9 @@ from tests.fixtures.driver import driver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
+import pytest
 
+@pytest.mark.smoke
 
 def test_ordenar_produtos_por_nome_az(driver):
     driver.get("https://www.saucedemo.com")

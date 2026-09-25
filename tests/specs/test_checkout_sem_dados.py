@@ -3,7 +3,9 @@ from selenium.webdriver.common.by import By
 from tests.fixtures.driver import driver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import pytest
 
+@pytest.mark.regression
 
 def test_checkout_sem_preencher_dados(driver):
     driver.get("https://www.saucedemo.com")

@@ -3,8 +3,10 @@ from selenium.webdriver.common.by import By
 from tests.fixtures.driver import driver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import pytest
 
-
+@pytest.mark.smoke
+@pytest.mark.regression
 def test_compra_produto_com_sucesso(driver):
 
     usuario = "standard_user"

@@ -3,8 +3,10 @@ from selenium.webdriver.common.by import By
 from tests.fixtures.driver import driver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import pytest
 
-
+@pytest.mark.regression
+@pytest.mark.e2e
 def test_logout_com_sucesso(driver):
     driver.get("https://www.saucedemo.com")
 

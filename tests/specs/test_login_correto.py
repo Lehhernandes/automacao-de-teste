@@ -6,26 +6,20 @@ from guara.application import Application
 from guara import it
 from tests.transactions.login_transaction import LoginWith
 from tests.fixtures.driver import driver
+import pytest
 
 #comentar todo texto ctrl + /
-
+@pytest.mark.smoke
 def test_login(driver):
 
-    # =========================
-    # 1. LOGIN
-    # =========================
-
     driver.get("https://www.saucedemo.com")
-
     driver.find_element(By.ID, "user-name").send_keys("standard_user")
     driver.find_element(By.ID, "password").send_keys("secret_sauce")
     driver.find_element(By.ID, "login-button").click()
-
-    # Validacao login
     assert "inventory.html" in driver.current_url
 
 
-
+#-------------------------------------------------------------#
 
 def test_login_2(driver):
 

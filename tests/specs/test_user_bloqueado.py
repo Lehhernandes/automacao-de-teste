@@ -7,8 +7,9 @@ from guara.application import Application
 from guara import it
 from tests.fixtures.driver import driver
 from tests.transactions.login_transaction import LoginWith
+import pytest
 
-
+@pytest.mark.regression
 def test_usuario_bloqueado(driver):
     usuario = "locked_out_user"
     senha = "secret_sauce"

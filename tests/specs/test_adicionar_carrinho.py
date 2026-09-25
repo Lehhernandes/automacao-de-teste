@@ -3,8 +3,11 @@ from selenium.webdriver.common.by import By
 from tests.fixtures.driver import driver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import pytest
 
-
+@pytest.mark.smoke
+@pytest.mark.regression
+@pytest.mark.e2e
 def test_adicionar_item_ao_carrinho(driver):
     driver.get("https://www.saucedemo.com")
 
